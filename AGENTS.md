@@ -13,6 +13,16 @@ how to build and test it.
   `build/` directory, not in system temp folders.
 - Don't discard uncommitted work you didn't make.
 - Don't deploy, rewrite published history or change repository settings
-  unless asked.
+  unless asked. When asked to publish the campus tour, run
+  `cd ~/gh/UMN-VR/tour && npm run deploy`. That builds the tour and pushes its
+  `gh-pages` branch, which GitHub Pages serves at https://umn-vr.github.io/tour/.
+  Photographs already on that branch stay. The club homepage is
+  `UMN-VR/UMN-VR.github.io` and this command does not publish it. A globe change
+  also needs the FOSS Earth site, from any directory:
+
+  ```sh
+  cd ~/gh/foss-earth/app && npm run build
+  cd ../foss-earth.github.io && npm run build && npm run deploy
+  ```
 - Don't send personal data, accounts or credentials to another service without
   consent.
