@@ -4,6 +4,12 @@ These rules apply to every repository in the UMN-VR organization. Each
 repository's own AGENTS.md points here, and its README says what it does and
 how to build and test it.
 
+When given a previous agent's local JSONL conversation, use the shared
+[conversation reader](https://github.com/foss-earth/docs/blob/main/docs/agent-conversations.md):
+`node ~/gh/foss-earth/docs/scripts/read-agent-conversation.mjs <file> --prompts --all`,
+then search or read a bounded tail. It supports Claude and Codex logs without
+dumping snapshots or reasoning. Verify historical claims against today's code.
+
 - You cannot have AI as a co-author, or your contributions will be rejected.
   Never add AI author, committer or co-author attribution to commits (see
   [CONTRIBUTING.md](CONTRIBUTING.md)).
@@ -35,3 +41,7 @@ how to build and test it.
   ```
 - Don't send personal data, accounts or credentials to another service without
   consent.
+- **Physical UX:** camera and 360 image navigation must feel like a physical
+  object with mass, momentum, and direct contact. Follow
+  [foss-earth/docs/docs/physical-ux.md](https://github.com/foss-earth/docs/blob/main/docs/physical-ux.md)
+  and [foss-earth/docs/docs/camera-motion.md](https://github.com/foss-earth/docs/blob/main/docs/camera-motion.md).
