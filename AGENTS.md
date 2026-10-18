@@ -41,6 +41,41 @@ dumping snapshots or reasoning. Verify historical claims against today's code.
   ```
 - Don't send personal data, accounts or credentials to another service without
   consent.
+- **Explanation on demand:** use a compact **?** button by default for
+  supplementary information, diagnostics and rationale, rather than a wordy
+  Details/More info action. Keep it last and available on collapsed components.
+  Keep only essential terse state, errors/fallbacks,
+  pending/apply feedback and decision-critical instructions visible by default.
+  Do not hide information needed to understand the current state or avoid mistakes.
+- **Readable control phrases:** choose label/control order by grammatical
+  sense, usually `Implementation [TS / WASM] ?`. Prefix/suffix text is allowed;
+  do not impose a universal slider-first or label-first order. Keep help last.
+- **Paragraph grouping:** each logical component in a paragraph grid has its
+  own compact rounded rectangle by default, including collapsed component
+  overrides. Keep a choice's segments together inside one track within its group.
+  Expanded component/group titles are the first naturally sized item in the
+  same wrapping paragraph grid as their controls, not a separate header row.
+  Full section headings are the exception and can occupy their own row.
+  Paragraph grids with expandable items show expanded items first, then
+  minimized items, using an order override that preserves relative order
+  within each group and retains focus/control state.
+- **Compact controls:** arrange content as compactly as practical, using natural
+  widths and wrapping paragraph grids where useful. Discrete choices use one
+  rounded segmented slider with short text buttons (digits for counts: 1
+  worker), selected by fill/outline; no visible radio circles. Use **Global /
+  Auto / Manual**. The **?** button is last; source-link icons belong inline at
+  the end of its tooltip text, never in another row button. Prefer existing
+  recognizable icons over verbose action text, with accessible names. Reuse the
+  shared UI factory and follow the full [control design
+  spec](https://github.com/foss-earth/docs/blob/main/docs/ui-layout.md#compact-segmented-choices).
+- **Stranded Chrome clones:** a run of the installed Google Chrome that is
+  killed instead of closed leaves a copy of the app, about 2 GB by `du`, under
+  `/private/var/folders`. After a Chrome run you stopped, that timed out or that
+  crashed, and whenever disk space comes up, run
+  `~/gh/foss-earth/browser-testing/scripts/chrome-clones.sh --clean`. It keeps
+  the clones of running browsers.
+  [chrome-code-sign-clones.md](https://github.com/foss-earth/docs/blob/main/docs/validation/chrome-code-sign-clones.md)
+  says why they appear.
 - **Physical UX:** camera and 360 image navigation must feel like a physical
   object with mass, momentum, and direct contact. Follow
   [foss-earth/docs/docs/physical-ux.md](https://github.com/foss-earth/docs/blob/main/docs/physical-ux.md)
