@@ -57,15 +57,15 @@ dumping snapshots or reasoning. Verify historical claims against today's code.
 
 - Don't deploy, rewrite published history or change repository settings
   unless asked. When asked to publish the campus tour, run
-  `cd ~/gh/UMN-VR/tour && npm run deploy`. That builds the tour and pushes its
-  `gh-pages` branch, which GitHub Pages serves at https://umn-vr.github.io/tour/.
+  `cd ~/gh/UMN-VR/tour && npm run deploy`. That builds the tour, when its
+  `gh-pages` branch lacks the build this would make, and pushes that branch,
+  which GitHub Pages serves at https://umn-vr.github.io/tour/.
   Photographs already on that branch stay. The club homepage is
   `UMN-VR/UMN-VR.github.io` and this command does not publish it. A globe change
   also needs the FOSS Earth site, from any directory:
 
   ```sh
-  cd ~/gh/foss-earth/app && npm run build
-  cd ../foss-earth.github.io && npm run build && npm run deploy
+  cd ~/gh/foss-earth/foss-earth.github.io && npm run deploy
   ```
 
 ## UI
